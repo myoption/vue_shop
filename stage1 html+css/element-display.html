@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .pigdaddy {
+        position: relative;
+        width: 520px;
+        height: 280px;
+      }
+      .hidden {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+      }
+      .pigdaddy:hover .hidden {
+        /* display: unset; */
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pigdaddy">
+      <div class="hidden"></div>
+      <img src="img/banner1.jpg" alt="" />
+    </div>
+  </body>
+</html>

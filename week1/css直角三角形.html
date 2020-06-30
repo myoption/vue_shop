@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .outer {
+        position: relative;
+        width: 200px;
+        height: 30px;
+        line-height: 30px;
+        border: 1px solid red;
+      }
+      .triangle {
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 80px;
+        top: 0;
+        border-color: transparent #fff transparent transparent;
+        border-width: 30px 20px 0 0;
+        border-style: solid;
+      }
+      .red {
+        float: left;
+        width: 100px;
+        height: 100%;
+        background: red;
+        color: #fff;
+        font-size: 700;
+      }
+      .white {
+        height: 100%;
+        font-size: 12px;
+        color: #909090;
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <span class="red">¥2099.00</span>
+      <div class="triangle"></div>
+      <span class="white">¥2649.00</span>
+    </div>
+  </body>
+</html>

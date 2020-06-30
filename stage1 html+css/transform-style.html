@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        perspective: 300px;
+        background: rgba(155, 255, 88, 0.3);
+        transform-style: preserve-3d;
+        transition: all 0.4s;
+      }
+      /* .box:hover {
+        transform: rotateY(180deg);
+      } */
+      .box:hover div:nth-child(1) {
+        transform: rotateY(180deg);
+        z-index: 0;
+      }
+      .box:hover div:nth-child(2) {
+        transform: rotateY(360deg);
+      }
+      .box div {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 180px;
+        height: 180px;
+        text-align: center;
+        line-height: 180px;
+        border-radius: 10px;
+      }
+      .box div:nth-child(1) {
+        background-color: sandybrown;
+        z-index: 1;
+        transition: all 0.4s;
+      }
+      .box div:nth-child(2) {
+        transform: rotateY(180deg);
+        background-color: teal;
+        transition: all 0.4s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div>正面</div>
+      <div>反面</div>
+    </div>
+  </body>
+</html>

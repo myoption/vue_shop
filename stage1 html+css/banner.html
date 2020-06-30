@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .banner {
+        position: relative;
+        margin: auto;
+        width: 520px;
+        height: 280px;
+        overflow: hidden;
+      }
+      button {
+        position: absolute;
+        color: gainsboro;
+        width: 30px;
+        height: 30px;
+      }
+      .left {
+        left: 0;
+        top: 125px;
+      }
+      .right {
+        right: 0;
+        top: 125px;
+      }
+      ul {
+        position: absolute;
+        top: 200px;
+        left: 80px;
+      }
+      ul li {
+        float: left;
+        list-style: none;
+      }
+      ul li a {
+        display: block;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background: gainsboro;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <img src="img/banner1.jpg" alt="" id="banner1" />
+      <img src="img/banner2.jpg" alt="" id="banner2" />
+      <img src="img/banner3.jpg" alt="" id="banner3" />
+      <img src="img/banner4.jpg" alt="" id="banner4" />
+      <img src="img/banner5.jpg" alt="" id="banner5" />
+      <button class="left">&lt;</button>
+      <button class="right">&gt;</button>
+      <ul>
+        <li><a href="#banner1"></a></li>
+        <li><a href="#banner2"></a></li>
+        <li><a href="#banner3"></a></li>
+        <li><a href="#banner4"></a></li>
+        <li><a href="#banner5"></a></li>
+      </ul>
+    </div>
+  </body>
+</html>

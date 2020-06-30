@@ -1,0 +1,302 @@
+body {
+  background-color: #f3f5f7;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.mw {
+  width: 1200px;
+  margin: auto;
+}
+.header {
+  height: 42px;
+  margin: 30px auto;
+  /* background: tomato; */
+}
+.logo {
+  width: 200px;
+  height: 42px;
+  float: left;
+}
+.upnav {
+  margin-left: 40px;
+  float: left;
+  height: 42px;
+}
+.upnav li {
+  float: left;
+  padding: 0px 10px;
+  /* line-height: 42px; */
+  margin: 0 15px;
+}
+.upnav li a {
+  display: block;
+  height: 42px;
+  font: 18px/42px "Microsoft YaHei";
+  color: #424243;
+}
+.upnav li a:hover {
+  border-bottom: 2px solid #00a4ff;
+}
+.search {
+  width: 412px;
+  height: 42px;
+  float: left;
+}
+.search input {
+  height: 36px;
+  width: 345px;
+  margin-top: 1px;
+  float: left;
+  border: 2px solid #00a4ff;
+  border-right: 0;
+  color: #bfbfbf;
+  padding-left: 15px;
+}
+.search input,
+button:focus {
+  outline: none;
+}
+.search button {
+  float: right;
+  margin-top: 1px;
+  width: 50px;
+  height: 40px;
+  border: 0;
+  background: url(../img/index_img/btn.png);
+}
+.header .user {
+  height: 42px;
+  margin-left: 30px;
+  float: left;
+}
+.header .user .icon {
+  float: left;
+  margin: 6px 0 0 15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background: url(../img/index_img/user.png);
+}
+.user span {
+  margin-left: 5px;
+  line-height: 42px;
+  color: #424243;
+}
+.bgc {
+  width: 100%;
+  background-color: #1c036c;
+}
+.banner {
+  height: 420px;
+  background: url(../img/index_img/banner2.png);
+}
+.subnav {
+  float: left;
+  height: 420px;
+  width: 190px;
+  background: rgba(170, 171, 172, 0.08);
+}
+.bannerimg {
+  float: left;
+  height: 420px;
+  width: 1010px;
+  /* background-color: aqua; */
+}
+.subnav li {
+  margin: 23px 22px;
+  color: #fff;
+}
+
+.subnav li a {
+  display: inline-block;
+  width: 100%;
+  font-size: 14px;
+  color: #fff;
+}
+.subnav span {
+  float: right;
+  margin-right: 3px;
+}
+.subnav a:hover {
+  color: #0a62a2;
+}
+.course ul {
+  float: right;
+  width: 230px;
+  margin-top: 50px;
+}
+.course .top {
+  color: white;
+  background: #9bceea;
+  text-align: center;
+  font: bold 18px "Microsoft YaHei";
+  padding: 11px 0;
+}
+.course .middle {
+  height: 70px;
+  background-color: #fff;
+}
+.course .detail {
+  color: #a5a5a5;
+  border-bottom: 1px solid #eaeaea;
+  margin: 0 20px;
+  padding: 10px 0;
+}
+.course .detail span {
+  font: 18px "Microsoft YaHei";
+  color: #424243;
+}
+.course .button {
+  height: 60px;
+  background-color: #fff;
+}
+.course .button button {
+  width: 200px;
+  height: 40px;
+  border: 1px solid #088af5;
+  margin: 0 16px;
+  color: #1c91f1;
+  background-color: #fff;
+}
+.nav {
+  margin-top: 10px;
+  height: 60px;
+  background-color: #fff;
+}
+.nav .left {
+  float: left;
+  width: 128px;
+  border-right: 1px solid #bfbfbf;
+  text-align: center;
+  margin: 19.5px 0;
+}
+.nav .left a:hover {
+  color: #1c91f1;
+}
+.nav .right {
+  border: none;
+}
+.nav .alone {
+  float: right;
+  margin: 19.5px 30px 19.5px 0;
+}
+.nav .alone a {
+  color: #1c91f1;
+}
+.middle .tittle {
+  margin-top: 30px;
+  width: 100%;
+  height: 42px;
+}
+.tittle span {
+  display: block;
+  margin-left: 20px;
+  float: left;
+  font-size: 20px;
+  line-height: 42px;
+}
+.tittle a {
+  display: block;
+  float: right;
+  margin-right: 30px;
+  font-size: 14px;
+  color: #a5a5a5;
+  line-height: 42px;
+}
+.middle ul {
+  float: right;
+}
+.middle li {
+  float: left;
+  width: 228px;
+  height: 270px;
+  background: url(../img/index_img/course.png);
+}
+.middle .content li {
+  margin-right: 15px;
+}
+.middle .content .up {
+  margin-bottom: 15px;
+  position: relative;
+}
+.middle .content .up img {
+  position: absolute;
+  top: 5px;
+  right: -3px;
+}
+.middle .content .rightest {
+  margin: 0;
+}
+.middle .content h4 {
+  margin: 180px 15px 20px 25px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+}
+.middle .content .info {
+  margin: 0 15px 0 25px;
+  color: #999;
+  font-size: 12px;
+}
+.info span {
+  color: #ff7c2d;
+}
+.footer {
+  /* float: left; */
+  margin-top: 40px;
+  width: 100%;
+  height: 410px;
+  background-color: #fff;
+}
+.footer .footer-left {
+  float: left;
+  margin-left: 20px;
+  width: 450px;
+}
+.footer-left img {
+  display: block;
+  margin-top: 20px;
+}
+.footer-left p {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #666666;
+}
+.footer-left button {
+  margin-top: 15px;
+  width: 120px;
+  height: 36px;
+  border: 1px solid #00a4ff;
+  color: #00a4ff;
+  background: #fff;
+}
+.footer-left button:hover {
+  background-color: #00a4ff;
+  color: #fff;
+}
+.footer .footer-right {
+  float: right;
+  width: 510px;
+}
+.footer-right dl {
+  float: left;
+  margin: 20px 0 0 70px;
+}
+.footer-right dt {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+.footer-right dd {
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+.footer-right dl a {
+  color: #000;
+}
+.footer-right dl dd a:hover {
+  color: #00a4ff;
+}

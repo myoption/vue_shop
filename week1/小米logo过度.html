@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        position: relative;
+        width: 55px;
+        height: 55px;
+        background: #ff6700;
+        overflow: hidden;
+      }
+      div::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        background: url(img/mi-logo.png);
+        /* z-index: 1; */
+        width: 55px;
+        height: 55px;
+        transition: all 0.2s;
+      }
+      div::after {
+        position: absolute;
+        left: -55px;
+        top: 0;
+        content: "";
+        background: url(img/mi-home.png);
+        /* z-index: 1; */
+        width: 55px;
+        height: 55px;
+      }
+
+      div:hover::before {
+        left: 55px;
+      }
+      div:hover::after {
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+/* 公用css文件*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/* 清除浮动，after伪元素 */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+.clearfix:after {
+  /* IE6-7 */
+  *zoom: 1;
+}
+/* 清除浮动，双伪元素 */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 120px;
+        height: 60px;
+        display: inline-block;
+        border-radius: 5px;
+      }
+      .one {
+        background-color: blueviolet;
+      }
+      .two {
+        background-color: rgb(226, 192, 43);
+      }
+      .three {
+        background-color: rgb(43, 226, 150);
+      }
+      .four {
+        background-color: rgb(43, 128, 226);
+      }
+      a {
+        display: inline-block;
+        width: 120px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+      }
+      .triangle {
+        width: 0px;
+        height: 0px;
+        border: 10px solid;
+        border-radius: unset;
+        position: relative;
+        left: 50px;
+        border-color: blueviolet transparent transparent;
+      }
+      #div2 {
+        border-color: rgb(226, 192, 43) transparent transparent;
+      }
+      #div3 {
+        border-color: rgb(43, 226, 150) transparent transparent;
+      }
+      #div4 {
+        border-color: rgb(43, 128, 226) transparent transparent;
+      }
+
+      .one:hover #one {
+        background-color: tomato;
+        border-radius: 5px;
+      }
+      .one:hover .triangle {
+        border-color: tomato transparent transparent;
+      }
+      .two:hover #two {
+        background-color: tomato;
+        border-radius: 5px;
+      }
+      .two:hover #div2 {
+        border-color: tomato transparent transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">
+      <a id="one">五彩导航</a>
+      <div class="triangle"></div>
+    </div>
+    <div class="two">
+      <a id="two">五彩导航</a>
+      <div class="triangle" id="div2"></div>
+    </div>
+    <div class="three">
+      <a id="three">五彩导航</a>
+      <div class="triangle" id="div3"></div>
+    </div>
+    <div class="four">
+      <a id="four">五彩导航</a>
+      <div class="triangle" id="div4"></div>
+    </div>
+  </body>
+</html>

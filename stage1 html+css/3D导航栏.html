@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        list-style: none;
+        width: 100px;
+        height: 34px;
+        perspective: 100px;
+      }
+      .overturn {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: all 0.7s;
+      }
+      .overturn:hover {
+        transform: rotateX(90deg);
+      }
+      .front,
+      .back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .front {
+        background-color: tomato;
+        z-index: 1;
+        transform: translateZ(17px);
+      }
+      .back {
+        background-color: thistle;
+        /* 位移属性需要再旋转之前 */
+        transform: translateY(17px) rotateX(-90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div class="overturn">
+          <div class="front">黑暗面</div>
+          <div class="back">光明面</div>
+        </div>
+      </li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </body>
+</html>
