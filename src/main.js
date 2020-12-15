@@ -9,6 +9,11 @@ import './assets/fonts/iconfont.css'
 // 导入axios并挂载到vue原型
 import axios from 'axios'
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
+// 设置拦截器 添加token
+axios.interceptors.request.use(config => {
+  config.headers.Authorization = window.sessionStorage.getItem('token')
+  return config
+})
 Vue.prototype.$http = axios
 Vue.config.productionTip = false
 
