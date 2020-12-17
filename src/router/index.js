@@ -4,13 +4,13 @@ import Login from '../components/Login.vue'
 import Home from '../components/Home.vue'
 import Welcome from '../components/Welcome.vue'
 import Users from '../components/Users.vue'
-import Roles from '../components/Roles.vue'
-import Rights from '../components/Rights.vue'
-import Goods from '../components/Goods.vue'
-import Params from '../components/Params.vue'
-import Categories from '../components/Categories.vue'
-import Orders from '../components/Orders.vue'
-import Repots from '../components/Repots.vue'
+import Roles from '../components/rights/Roles.vue'
+import Rights from '../components/rights/Rights.vue'
+import Goods from '../components/goods/Goods.vue'
+import Params from '../components/goods/Params.vue'
+import Categories from '../components/goods/Categories.vue'
+import Orders from '../components/orders/Orders.vue'
+import Repots from '../components/reports/Repots.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -23,12 +23,12 @@ const routes = [
       { path: '/welcome', component: Welcome },
       { path: '/users', component: Users },
       { path: '/roles', component: Roles },
-      { path: '/rights', comments: Rights },
-      { path: '/goods', comments: Goods },
-      { path: '/params', comments: Params },
-      { path: '/categories', comments: Categories },
-      { path: '/orders', comments: Orders },
-      { path: '/reports', comments: Repots }
+      { path: '/rights', component: Rights },
+      { path: '/goods', component: Goods },
+      { path: '/params', component: Params },
+      { path: '/categories', component: Categories },
+      { path: '/orders', component: Orders },
+      { path: '/reports', component: Repots }
     ]
   }
 ]

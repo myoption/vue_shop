@@ -11,7 +11,7 @@
       <!-- 收起菜单 调整aside宽度 -->
       <el-aside :width="isCollapse ? '64px' : '200px'">
         <div class="toggle_button" @click="toggleCollapse">|||</div>
-        <el-menu background-color="#333744" text-color="#fff" active-text-color="#409eff" :unique-opened="true" :collapse="isCollapse" :collapse-transition="false" router :default-active="activePath">
+        <el-menu default-active="activePath" background-color="#333744" text-color="#fff" active-text-color="#409eff" :unique-opened="true" :collapse="isCollapse" :collapse-transition="false" router>
           <!-- 1级菜单 -->
           <el-submenu :index="item.id + ''" v-for="item in menuList" :key="item.id">
             <!-- 一级菜单模板区域 -->

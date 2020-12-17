@@ -38,7 +38,7 @@
             <el-button type="primary" icon="el-icon-edit" size="mini" @click="modifyUser(scope.row.id)"></el-button>
             <el-button type="danger" icon="el-icon-delete" size="mini" @click="deleteUser(scope.row.id)"></el-button>
             <el-tooltip effect="dark" content="分配角色" placement="right-start" :enterable="false">
-              <el-button type="primary" icon="el-icon-setting" size="mini"></el-button>
+              <el-button type="primary" icon="el-icon-setting" size="mini" @click="asignRole(scope.row)"></el-button>
             </el-tooltip>
           </template>
         </el-table-column>
@@ -112,6 +112,23 @@
         <el-button type="primary" @click="deleteUserConfirm">确 定</el-button>
       </span>
     </el-dialog>
+    <!-- 分配角色对话框 -->
+    <el-dialog :visible.sync="asignRoleDialogVisible" title="分配角色" width="30%" @close="resetData">
+      <div>
+        <p>当前的用户：{{ userInfo.username }}</p>
+        <p>当前的角色：{{ userInfo.role_name }}</p>
+        <p>
+          请选择角色：
+          <el-select v-model="selectedRoleID" placeholder="请选择">
+            <el-option v-for="item in roleList" :key="item.id" :label="item.roleName" :value="item.id"></el-option>
+          </el-select>
+        </p>
+      </div>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="asignRoleDialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="confirmRole">确 定</el-button>
+      </span>
+    </el-dialog>
   </div>
 </template>
 
@@ -142,6 +159,10 @@ export default {
         pagesize: 2
       },
       userList: [],
+      roleList: [],
+      // 需要分配权限的用户信息
+      userInfo: {},
+      selectedRoleID: '',
       total: 0,
       // 添加用户对话框的显示与隐藏
       addDialogVisible: false,
@@ -149,6 +170,8 @@ export default {
       deleteDialogVisible: false,
       // 编辑用户对话框的显示与隐藏
       modifyDialogVisible: false,
+      // 分配角色对话框
+      asignRoleDialogVisible: false,
       // 添加用户的数据
       addForm: {
         username: '',
@@ -321,6 +344,43 @@ export default {
       this.deleteDialogVisible = false
       this.$message.success(result.meta.msg)
       this.getUserList()
+    },
+    // 获取角色数据
+    async getRoleList() {
+      const { data: result } = await this.$http.get('roles')
+      // console.log(result)
+      if (result.meta.status !== 200) {
+        return this.$message.error(result.meta.msg)
+      }
+      this.roleList = result.data
+    },
+    // 提前处理角色相关数据
+    asignRole(user) {
+      // console.log(user)
+      this.getRoleList()
+      this.asignRoleDialogVisible = true
+      this.userInfo = user
+    },
+    // 提交角色
+    async confirmRole() {
+      console.log(this.selectedRoleID)
+      if (!this.selectedRoleID) {
+        return this.$message.error('请选择角色')
+      }
+      const { data: result } = await this.$http.put(`users/${this.userInfo.id}/role`, {
+        rid: this.selectedRoleID
+      })
+      if (result.meta.status !== 200) {
+        return this.$message.error(result.meta.msg)
+      }
+      this.$message.success('设置成功')
+      this.asignRoleDialogVisible = false
+      this.getUserList()
+    },
+    // 重置数据
+    resetData() {
+      this.selectedRoleID = ''
+      this.userInfo = {}
     }
   }
 }
