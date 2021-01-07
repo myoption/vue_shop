@@ -14,7 +14,7 @@
         <el-col>
           <span>选择商品分类：</span>
           <!-- 级联选择区域 -->
-          <el-cascader size="mini" v-model="selectedKeys" :options="catList" :props="catProps" @change="handleChange" :show-all-levels="false" clearable></el-cascader>
+          <el-cascader expand-trigger="hover" size="mini" v-model="selectedKeys" :options="catList" :props="catProps" @change="handleChange" :show-all-levels="false" clearable></el-cascader>
         </el-col>
       </el-row>
       <!-- 选项卡区域 -->
@@ -124,7 +124,6 @@ export default {
       // 分类数据
       catList: [],
       catProps: {
-        expandTrigger: 'hover',
         //指定选中的值
         value: 'cat_id',
         // 显示的值
